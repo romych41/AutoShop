@@ -1,0 +1,829 @@
+@import url("https://fonts.googleapis.com/css?family=Jura");
+@import url("https://fonts.googleapis.com/css?family=Gugi");
+body {
+  margin: 0;
+  padding: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#660066), to(#38aac7));
+  background: linear-gradient(to top, #660066, #38aac7);
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80px;
+      grid-template-rows: 80px;
+  -ms-grid-columns: 3fr 6fr 2fr 2fr;
+      grid-template-columns: 3fr 6fr 2fr 2fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.header-logo {
+  padding-left: 30px;
+  font-weight: 800;
+  position: relative;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.header-logo span {
+  font-size: 28px;
+  font-family: "Jura";
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+
+.header-logo span:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  -webkit-transition: .6s;
+  transition: .6s;
+  z-index: -5;
+}
+
+.header-nav {
+  z-index: 5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(120px, 0.8fr) 1fr;
+      grid-template-columns: minmax(120px, 0.8fr) 1fr;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  grid-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-nav__link {
+  color: white;
+  z-index: 5;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Jura";
+  text-align: center;
+  padding: 10px 19px 12px 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.header-nav__link:hover {
+  -webkit-box-shadow: 0 0 5px #e91e63;
+          box-shadow: 0 0 5px #e91e63;
+  background-color: #e91e63;
+  font-weight: 900;
+}
+
+.header-contacts {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Jura";
+  text-align: right;
+}
+
+.header-basket {
+  z-index: 5;
+  position: fixed;
+  right: 5px;
+  top: 28px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Jura";
+  text-align: right;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header-basket i {
+  cursor: pointer;
+  padding-right: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.header-basket i:hover {
+  color: #e91e63;
+  text-shadow: 0 0 5px white;
+}
+
+.header-basket-quantity, .header-basket span {
+  padding: 3px 10px 6px 10px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px #e91e63;
+          box-shadow: 0 0 5px #e91e63;
+  background-color: #e91e63;
+  margin-right: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Jura";
+}
+
+.header-images {
+  margin-top: 100px;
+  height: 200vh;
+  align: center;
+  overflow: hidden;
+  padding-left: 35px;
+}
+
+.header-images div {
+  margin-top: 50px;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+}
+
+.header-images div img {
+  width: 19.0%;
+}
+
+.catalogue {
+  min-height: 100vh;
+}
+
+.catalogue .category-picker {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.catalogue .category-picker h1 {
+  width: 100%;
+  font-size: 30px;
+  font-family: "Jura";
+  color: white;
+  margin-bottom: 20px;
+}
+
+.catalogue .category-picker input[type="submit"] {
+  position: absolute;
+  left: 44%;
+  cursor: pointer;
+  color: #5a2d80;
+  font-family: "Jura";
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 0 15px white;
+          box-shadow: 0 0 15px white;
+  border: 2px solid white;
+  background: white;
+  font-size: 17px;
+  font-weight: 800;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.catalogue .category-picker input[type="submit"]:hover {
+  background: #68e668;
+  color: white;
+}
+
+.catalogue .category-picker .catalogue-filter {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.catalogue .category-picker form div {
+  margin: 10px;
+}
+
+.catalogue .category-picker form div label {
+  cursor: pointer;
+}
+
+.catalogue .category-picker form div label input[type="checkbox"] {
+  display: none;
+}
+
+.catalogue .category-picker form div label span {
+  position: relative;
+  display: inline-block;
+  background: #424242;
+  padding: 15px 30px;
+  color: #c0c0c0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  font-size: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  font-family: "Jura";
+}
+
+.catalogue .category-picker form div label span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.catalogue-items {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.catalogue-items-item {
+  margin: 15px 25px;
+  text-align: center;
+  border: 5px solid white;
+  width: 338px;
+  border-radius: 30px;
+  font-weight: 700;
+  background-color: lightpink;
+  -webkit-box-shadow: 0 2px 20px lightpink;
+          box-shadow: 0 2px 20px lightpink;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.catalogue-items-item:hover {
+  background-color: #e91e63;
+  -webkit-box-shadow: 0 2px 20px #e91e63;
+          box-shadow: 0 2px 20px #e91e63;
+}
+
+.catalogue-items-item .item-image {
+  border-bottom: 3px solid white;
+  min-height: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.catalogue-items-item .item-image img {
+  width: 300px;
+  max-height: 265px;
+  margin: 20px 20px 20px 20px;
+  border-radius: 300px;
+  -webkit-box-shadow: 0 1px 10px white;
+          box-shadow: 0 1px 10px white;
+}
+
+.catalogue-items-item span {
+  font-family: "Jura";
+  font-size: 25px;
+  color: white;
+  display: block;
+  text-align: center;
+  border-bottom: 3px solid white;
+}
+
+.catalogue-items-item .item-quantity {
+  padding-top: 10px;
+  padding-bottom: 12px;
+  background-color: #660066;
+  border-radius: 0 0 24px 24px;
+}
+
+.catalogue-items-item > span:nth-child(2) {
+  height: 65px;
+  vertical-align: middle;
+}
+
+.catalogue-items-item .item-quantity a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Jura";
+}
+
+.catalogue-items-item .item-quantity .plus {
+  margin-right: 15px;
+}
+
+.catalogue-items-item .item-quantity .plus, .catalogue-items-item .item-quantity .minus {
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.catalogue-items-item .item-quantity .plus:hover, .catalogue-items-item .item-quantity .minus:hover {
+  border-color: #e91e63;
+}
+
+.catalogue-items-item .item-quantity input {
+  font-family: "Jura";
+}
+
+.catalogue-items-item .item-quantity input[type="text"] {
+  width: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.catalogue-items-item .item-quantity input[type="submit"] {
+  font-size: 15px;
+  cursor: pointer;
+  background: #660066;
+  color: white;
+  padding: 5px 10px 7px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.catalogue-items-item .item-quantity input[type="submit"]:hover {
+  background-color: white;
+  color: #660066;
+  -webkit-box-shadow: 0 1px 5px white;
+          box-shadow: 0 1px 5px white;
+}
+
+.button {
+  color: #e91e63;
+  right: 100px;
+  font-size: 25px;
+  background-color: white;
+  padding: 15px 17px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 1px 10px white;
+          box-shadow: 0 1px 10px white;
+}
+
+.button:hover {
+  background-color: #e91e63;
+  color: white;
+  -webkit-box-shadow: 0 1px 10px #e91e63;
+          box-shadow: 0 1px 10px #e91e63;
+}
+
+.button-catalogue {
+  top: 100px;
+  position: absolute;
+}
+
+.button-top {
+  z-index: 999999;
+  right: 20px;
+  bottom: 20px;
+  position: fixed;
+}
+
+.share:hover > h1 > span:nth-child(1):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+.share:hover > h1 > span:nth-child(1) {
+  color: #38aac7;
+  -webkit-transition-delay: 110ms;
+          transition-delay: 110ms;
+}
+
+.share:hover > h1 > span:nth-child(2):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+.share:hover > h1 > span:nth-child(2) {
+  color: #38aac7;
+  -webkit-transition-delay: 220ms;
+          transition-delay: 220ms;
+}
+
+.share:hover > h1 > span:nth-child(3):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.share:hover > h1 > span:nth-child(3) {
+  color: #38aac7;
+  -webkit-transition-delay: 330ms;
+          transition-delay: 330ms;
+}
+
+.share:hover > h1 > span:nth-child(4):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.share:hover > h1 > span:nth-child(4) {
+  color: #38aac7;
+  -webkit-transition-delay: 440ms;
+          transition-delay: 440ms;
+}
+
+.share:hover > h1 > span:nth-child(5):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.share:hover > h1 > span:nth-child(5) {
+  color: #38aac7;
+  -webkit-transition-delay: 550ms;
+          transition-delay: 550ms;
+}
+
+.share:hover > h1 > span:nth-child(6):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.share:hover > h1 > span:nth-child(6) {
+  color: #38aac7;
+  -webkit-transition-delay: 660ms;
+          transition-delay: 660ms;
+}
+
+.share:hover > h1 > span:nth-child(7):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 700ms;
+          transition-delay: 700ms;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.share:hover > h1 > span:nth-child(7) {
+  color: #38aac7;
+  -webkit-transition-delay: 770ms;
+          transition-delay: 770ms;
+}
+
+.share:hover > h1 > span:nth-child(8):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 800ms;
+          transition-delay: 800ms;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.share:hover > h1 > span:nth-child(8) {
+  color: #38aac7;
+  -webkit-transition-delay: 880ms;
+          transition-delay: 880ms;
+}
+
+.share:hover > h1 > span:nth-child(9):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 900ms;
+          transition-delay: 900ms;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.share:hover > h1 > span:nth-child(9) {
+  color: #38aac7;
+  -webkit-transition-delay: 990ms;
+          transition-delay: 990ms;
+}
+
+.share:hover > h1 > span:nth-child(10):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.share:hover > h1 > span:nth-child(10) {
+  color: #38aac7;
+  -webkit-transition-delay: 1100ms;
+          transition-delay: 1100ms;
+}
+
+.share:hover > h1 > span:nth-child(11):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 1100ms;
+          transition-delay: 1100ms;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.share:hover > h1 > span:nth-child(11) {
+  color: #38aac7;
+  -webkit-transition-delay: 1210ms;
+          transition-delay: 1210ms;
+}
+
+.share:hover > h1 > span:nth-child(12):after {
+  background: white;
+  width: 100%;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-transition-delay: 1200ms;
+          transition-delay: 1200ms;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.share:hover > h1 > span:nth-child(12) {
+  color: #38aac7;
+  -webkit-transition-delay: 1320ms;
+          transition-delay: 1320ms;
+}
+
+#auth-modal, #reg-modal {
+  text-align: center;
+  font-family: "Jura";
+}
+
+#auth-modal form, #reg-modal form {
+  margin-bottom: 30px;
+}
+
+#auth-modal span, #reg-modal span {
+  font-weight: 800;
+  font-size: 25px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#auth-modal input, #reg-modal input {
+  display: inline-block;
+  background: #DDA0DD;
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid lightgrey;
+  padding: 12px 0;
+  outline: 0;
+  font-size: 15px;
+  color: white;
+  font-family: "Jura";
+}
+
+#auth-modal input[type="submit"], #reg-modal input[type="submit"] {
+  cursor: pointer;
+  padding: 10px 15px;
+  color: #DDA0DD;
+  position: absolute;
+  bottom: -15px;
+  font-family: "Jura";
+  font-size: 15px;
+  background: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#auth-modal input[type="submit"]:hover, #reg-modal input[type="submit"]:hover {
+  color: white;
+  background: #68e668;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+}
+
+#auth-modal input[type="submit"] {
+  left: 200px;
+  width: 80px;
+}
+
+#reg-modal input[type="submit"] {
+  left: 144px;
+  width: 190px;
+}
+
+.basket {
+  border: 3px solid white;
+  border-radius: 20px;
+  background-color: #DDA0DD;
+  z-index: 7;
+  min-width: 450px;
+  /*text-align: left;*/
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+}
+
+.basket-items {
+  max-height: 450px;
+  overflow: auto;
+}
+
+.basket-item {
+  color: white;
+  height: 50px;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+}
+
+.basket-item:nth-child(1) {
+  margin-top: 20px;
+}
+
+.basket-item:nth-last-child(1) {
+  margin-bottom: 40px;
+}
+
+.basket-item-image {
+  margin-left: 15px;
+  padding: 0 5px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid white;
+  border-radius: 20px 0 0 20px;
+}
+
+.basket-item-image img {
+  width: 50px;
+}
+
+.fa-trash-alt {
+  cursor: pointer;
+  color: #660066;
+  position: relative;
+  padding-top: 15px;
+  margin-left: 10px;
+}
+
+.fa-trash-alt:hover {
+  color: #e91e63;
+}
+
+.basket-item span {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #660066;
+  padding: 0px 5px 0 5px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+}
+
+.basket-item span:nth-child(2) {
+  width: 220px;
+}
+
+.basket-item span:nth-child(3) {
+  border-radius: 0 20px 20px 0;
+  width: 85px;
+}
+
+.basket input[type="submit"] {
+  cursor: pointer;
+  position: absolute;
+  bottom: -20px;
+  left: 139px;
+  background: white;
+  color: #660066;
+  font-size: 15px;
+  font-family: "Jura";
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.basket input[type="submit"]:hover {
+  background: #ffa500;
+  color: white;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+}
+
+.null-opacity {
+  opacity: 0;
+}
+
+.top-removed {
+  top: -100%;
+}
+
+.header-logout {
+  font-size:20px;
+  font-family: Jura;
+  margin-left: 20px;
+  margin-top: 5px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.header-logout:hover {
+  background-color: #e91e63;
+  box-shadow: 0 0 5px #e91e63;
+  font-weight: 900;
+}
+
+.header-username {
+  font-size:20px;
+  font-family: Jura;
+  margin-left: 50px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=style.css.map */

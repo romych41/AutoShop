@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Jura');
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(#660066), to(#38aac7)) no-repeat;
+    background: linear-gradient(to top, #660066, #38aac7) no-repeat;
+    font-family: Jura;
+    color: white;
+    text-align: center;
+}
+
+table {
+    box-shadow: 0 0 10px white;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 10%;
+    width: 80%;
+    border: 3px solid white;
+    border-collapse: collapse;
+}
+
+tr {
+    line-height: 50px;
+}
+
+tr:nth-child(1) {
+    font-weight: 700;
+}
+
+td {
+    border: 2px solid white;
+}
+
+td:nth-last-child(1) {
+    width: 150px;
+}
+
+td form input[type="submit"] {
+    font-size: 15px;
+    padding: 5px 10px;
+    font-family: Jura;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    border:2px solid white;
+    font-weight: 600;
+}
+
+td form input[type="submit"]:hover {
+    background-color: #e91e63;
+}
+
+form[action="/logout"] {
+    position: fixed;
+    bottom: 20px;
+    right: 17px;
+}
+
+form[action="/logout"] input {
+    font-size: 20px;
+    padding: 12px 16px;
+    font-family: Jura;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    border:2px solid white;
+    font-weight: 600;
+    box-shadow: 0 0 5px white;
+}
+
+form[action="/logout"] input:hover {
+    background-color: #e91e63;
+}
+
+

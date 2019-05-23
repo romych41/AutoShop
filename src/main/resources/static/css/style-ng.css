@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Jura');
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+    font-family: Jura;
+} 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+    font-family: Jura;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+    font-family: Jura;
+}
+.catalogue .category-picker div label input[type="checkbox"]:checked ~ span
+{
+    background: #e91e63;
+    color: #fff;
+    box-shadow: 0 2px 20px #e91e63;
+}
+
+.catalogue .catalogue-items .catalogue-items-item span:nth-child(2)
+{
+    background-color: #DDA0DD;  
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.catalogue .catalogue-items .catalogue-items-item span:nth-child(3)
+{
+ 
+    background-color: rgb(236, 84, 142);
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.modal {
+    display: none;
+}
+
+.modal_active {
+    display: block;
+    position: fixed;
+    top: 185px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.modal__content {
+    width: 425px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #DDA0DD;
+    padding: 10px 25px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.modal__close {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    transition: all 0.2s;
+}
+
+.modal__close:hover,
+.modal__close:focus{
+    color: #e91e63;
+    outline: none;
+}
+
+
+
+/*
+.catalogue .category-picker div:nth-child(5n + 2) label input[type="checkbox"]:checked ~ span
+{
+    background: #0f0;
+    color: #fff;
+    box-shadow: 0 2px 20px #0f0;
+}
+
+.catalogue .category-picker div:nth-child(5n + 3) label input[type="checkbox"]:checked ~ span
+{
+    background: #df01d7;
+    color: #fff;
+    box-shadow: 0 2px 20px #df01d7;
+}
+
+.catalogue .category-picker div:nth-child(5n + 4) label input[type="checkbox"]:checked ~ span
+{
+    background: #2e2efe;
+    color: #fff;
+    box-shadow: 0 2px 20px #2e2efe;
+}
+
+.catalogue .category-picker div:nth-child(5n + 5) label input[type="checkbox"]:checked ~ span
+{
+    background: #ffeb3b;
+    color: #fff;
+    box-shadow: 0 2px 20px #ffeb3b;
+}*/
